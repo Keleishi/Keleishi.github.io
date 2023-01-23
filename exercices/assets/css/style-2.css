@@ -3,7 +3,7 @@
 *, *::before, *::after { box-sizing: border-box }
 html { height: 100%; font-size: 100%; font: inherit; vertical-align: baseline;
 scroll-behavior: smooth; scroll-padding-top: 20px }
-body { max-width: 1600px; line-height: 1.5; margin-left: auto; margin-right: auto; 
+body {line-height: 1.5; margin-left: auto; margin-right: auto; 
 min-height: 100vh; text-rendering: optimizeSpeed }  
 img { width: 100%; height: auto; display: block }
 h1, h2, h3, h4 { width: 100% }
@@ -249,10 +249,17 @@ input, button, textarea, select { font: inherit }
 }
 
 /* Desktops */
-@media (min-width: 768px) { section { padding: 4% 20% } }
+@media (min-width: 1025px) { 
+    section { padding: 5% 4% } 
+    section.w-800px > * { max-width: 800px; margin-left: auto; margin-right: auto;}
+    section.w-1024px > * { max-width: 800px; margin-left: auto; margin-right: auto;}
+    section.w-1140px > * { max-width: 800px; margin-left: auto; margin-right: auto;}
+    section.w-1136px > * { max-width: 800px; margin-left: auto; margin-right: auto;} }
 
+/* Tablets */
+@media (min-width: 768px) and (max-width: 1024px) { section { padding: 5% 6% } }
 /* Mobiles */
-@media (max-width: 767px) { section { padding: 12% 8% } }
+@media (max-width: 767px) { section { padding: 32px 9% 42px 9% } }
 
 body { background-color: #C1A57B }
 
@@ -263,6 +270,7 @@ section {
 .section-1
 {
     background-color: #222831;
+    text-align: center;
 }
 
 .section-1 h2,
@@ -302,9 +310,10 @@ h1 {
 }
 
 h2 {
-    font-size: 36px;
+    font-size: calc(22px + (42 - 22) * ((100vw - 320px)/(1600 - 320)));
     margin-bottom: 4px;
     color: #2C3639;
+    font-family: sans-serif;
 }
 
 h3 {
@@ -314,9 +323,18 @@ h3 {
 }
 
 p {
-    font-size: 18px;
+    font-size: calc(15px + (24 - 15) * ((100vw - 320px)/(1600 - 320)));
     font-family: sans-serif;
     line-height: 1.6;
     margin-bottom: 20px;
     color: #3F4E4F;
+}
+
+/*UTILITY CLASSES*/
+@media (min-width: 1025px){
+    .text-center-desktop {text-align: center;}
+}
+
+@media (max-width: 767px){
+.text-center-mobile {text-align: center;}
 }
