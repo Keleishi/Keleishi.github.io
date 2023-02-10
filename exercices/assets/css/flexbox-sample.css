@@ -37,6 +37,13 @@ section > * { margin-left: 0 }
     flex-wrap: wrap
 }
 
+button{
+    margin-top: 32px;
+    padding: 8px 16px;
+    background-color: blue;
+    color : white;
+}
+
 /* === COLUMN WIDTH ON MOBILES === */
 @media (max-width: 767px) {
     .bono, .edge, .adam, .larry {
