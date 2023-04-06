@@ -22,13 +22,7 @@ header.hero-block-js {
     text-align: left;
 }
 
-@media(min-width: 768px) {
-    header.hero-block-js .hero-text-container { padding: 0 12% 2% 9% }   
-}
-
-@media(max-width: 768px) {
-    header.hero-block-js .hero-text-container { padding: 22px 12% 22px 9% }   
-}
+header.hero-block-js .hero-text-container { padding: 0 12% 2% 9% }   
 
 header.hero-block-js .hero-text-container h1 {
     font-size: calc(28px + (52 - 28) * ((100vw - 320px) / (1920 - 320)));
@@ -71,14 +65,3 @@ header.hero-block-js .hero-text-container img {
 
 .theme-js .col-2 a.btn > :nth-child(2) { margin-left: 10px }
 
-.hero-text-container a:link, .hero-text-container a:visited,
-.hero-text-container a:focus, .hero-text-container a:hover, .hero-text-container a:active { 
-    text-decoration: underline
-}
-
-.container-flex.theme-js .col-4 {
-    display: flex;
-    flex-direction: column;
-    overflow: hidden;
-    justify-content: space-between;
-}
